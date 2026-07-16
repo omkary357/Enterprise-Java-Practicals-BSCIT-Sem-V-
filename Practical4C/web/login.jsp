@@ -1,0 +1,29 @@
+<%@page contentType="text/html"%>
+
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+
+    <body>
+
+        <h2>User Login</h2>
+
+        <form action="loginProcess.jsp" method="post">
+
+            Username :
+            <input type="text" name="username">
+
+            <br><br>
+
+            Password :
+            <input type="password" name="password">
+
+            <br><br>
+
+            <input type="submit" value="Login">
+
+        </form>
+
+    </body>
+</html>
