@@ -1,62 +1,44 @@
-<%@page contentType="text/html"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%
+    application.setAttribute("college", "XYZ College");
+    session.setAttribute("username", "Omkar");
+    Cookie ck = new Cookie("City", "Mumbai");
+    response.addCookie(ck);
+%>
+<!DOCTYPE html>
 <html>
-
     <head>
-
-        <title>Room Reservation</title>
-
+        <title>Expression Language Demo</title>
     </head>
-
     <body>
-
-        <h2>Room Reservation System</h2>
-
-        <form action="RoomServlet" method="post">
-
-            Customer Name
-
-            <input type="text"
-                   name="name"
-                   required>
-
+        <h2>Expression Language Demonstration</h2>
+        <form action="result.jsp" method="post">
+            Name :
+            <input type="text" name="name">
             <br><br>
-
-            Room Type
-
-            <select name="room">
-
-                <option>Single</option>
-
-                <option>Double</option>
-
-                <option>Suite</option>
-
-            </select>
-
+            Age :
+            <input type="number" name="age">
             <br><br>
-
-            Check In
-
-            <input type="date"
-                   name="checkin"
-                   required>
-
+            Course :
+            <input type="text" name="course">
             <br><br>
-
-            Check Out
-
-            <input type="date"
-                   name="checkout"
-                   required>
-
+            Hobbies :
+            <input type="checkbox"
+                   name="hobby"
+                   value="Reading">
+            Reading
+            <input type="checkbox"
+                   name="hobby"
+                   value="Music">
+            Music
+            <input type="checkbox"
+                   name="hobby"
+                   value="Sports">
+            Sports
             <br><br>
-
             <input type="submit"
-                   value="Reserve Room">
-
+                   value="Submit">
         </form>
-
     </body>
-
 </html>

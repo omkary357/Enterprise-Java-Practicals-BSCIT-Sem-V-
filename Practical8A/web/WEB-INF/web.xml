@@ -7,9 +7,25 @@
 http://xmlns.jcp.org/xml/ns/javaee
 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
+    <servlet>
+
+        <servlet-name>HitServlet</servlet-name>
+
+        <servlet-class>mypack.HitServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>HitServlet</servlet-name>
+
+        <url-pattern>/HitServlet</url-pattern>
+
+    </servlet-mapping>
+
     <welcome-file-list>
 
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
 
     </welcome-file-list>
 
