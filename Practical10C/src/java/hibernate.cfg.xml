@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- JavaDB (Derby) Driver and Connection URL -->
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/employee;create=true</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+
+    <!-- JavaDB Dialect for Hibernate -->
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>
+
+    <!-- Automatically create or update table structure -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+    <!-- Print SQL queries in server console for debugging -->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+
+    <!-- Register the Entity Class -->
+    <mapping class="entity.Employee"/>
+  </session-factory>
+</hibernate-configuration>
